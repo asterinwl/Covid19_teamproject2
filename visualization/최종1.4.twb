@@ -1,0 +1,1521 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20212.21.0712.0907                               -->
+<workbook source-build='2021.2.1 (20212.21.0712.0907)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <ISO8601PeriodTypes />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='기준일' datatype='date' name='[매개 변수 1 1]' param-domain-type='range' role='measure' type='quantitative' value='#2020-06-01#'>
+        <calculation class='tableau' formula='#2020-06-01#' />
+        <range granularity='1' max='#2021-09-01#' min='#2020-04-01#' period-type-v2='month' />
+      </column>
+      <column caption='확진 기준일' datatype='date' name='[매개 변수 1]' param-domain-type='range' role='measure' type='quantitative' value='#2021-01-31#'>
+        <calculation class='tableau' formula='#2021-01-31#' />
+        <range granularity='1' max='#2021-08-31#' min='#2020-03-31#' period-type-v2='month' />
+      </column>
+    </datasource>
+    <datasource caption='DistrictRaw(corona19)' inline='true' name='federated.0b6kdmt0oggmyf1811prm0zs8hm4' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='52.78.90.155' name='mysql.16xwalh0w95ti81bhevr60ao1w01'>
+            <connection class='mysql' dbname='corona19' odbc-native-protocol='' one-time-sql='' port='3306' server='52.78.90.155' source-charset='' username='ogu' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='mysql.16xwalh0w95ti81bhevr60ao1w01' name='Decide' table='[Decide]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='mysql.16xwalh0w95ti81bhevr60ao1w01' name='Decide' table='[Decide]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>날짜</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[날짜]</local-name>
+            <parent-name>[Decide]</parent-name>
+            <remote-alias>날짜</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Decide_7F2A9B8C74DE45F7BE43BA8AE56D39DE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>당일 확진자 수</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[당일 확진자 수]</local-name>
+            <parent-name>[Decide]</parent-name>
+            <remote-alias>당일 확진자 수</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Decide_7F2A9B8C74DE45F7BE43BA8AE56D39DE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>검사 진행 수</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[검사 진행 수]</local-name>
+            <parent-name>[Decide]</parent-name>
+            <remote-alias>검사 진행 수</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Decide_7F2A9B8C74DE45F7BE43BA8AE56D39DE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>누적 확진자 수</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[누적 확진자 수]</local-name>
+            <parent-name>[Decide]</parent-name>
+            <remote-alias>누적 확진자 수</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Decide_7F2A9B8C74DE45F7BE43BA8AE56D39DE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>누적 사망자 수</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[누적 사망자 수]</local-name>
+            <parent-name>[Decide]</parent-name>
+            <remote-alias>누적 사망자 수</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Decide_7F2A9B8C74DE45F7BE43BA8AE56D39DE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>누적 격리 해제 수</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[누적 격리 해제 수]</local-name>
+            <parent-name>[Decide]</parent-name>
+            <remote-alias>누적 격리 해제 수</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Decide_7F2A9B8C74DE45F7BE43BA8AE56D39DE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>치료 중 환자 수</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[치료 중 환자 수]</local-name>
+            <parent-name>[Decide]</parent-name>
+            <remote-alias>치료 중 환자 수</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Decide_7F2A9B8C74DE45F7BE43BA8AE56D39DE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>누적 확진률</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[누적 확진률]</local-name>
+            <parent-name>[Decide]</parent-name>
+            <remote-alias>누적 확진률</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Decide_7F2A9B8C74DE45F7BE43BA8AE56D39DE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>누적 검사 수</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[누적 검사 수]</local-name>
+            <parent-name>[Decide]</parent-name>
+            <remote-alias>누적 검사 수</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Decide_7F2A9B8C74DE45F7BE43BA8AE56D39DE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>누적 검사 완료 수</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[누적 검사 완료 수]</local-name>
+            <parent-name>[Decide]</parent-name>
+            <remote-alias>누적 검사 완료 수</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Decide_7F2A9B8C74DE45F7BE43BA8AE56D39DE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='p.검사 대비 확진 확률 ' datatype='real' default-format='n#,##0.00&quot;%&quot;;-#,##0.00&quot;%&quot;' name='[Calculation_1100004216009211904]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[당일 확진자 수]/[검사 진행 수]' />
+      </column>
+      <column caption='수도권' datatype='integer' name='[Calculation_1624392097587499014]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[경기]+[서울]+[인천]' />
+      </column>
+      <column caption='비수도권' datatype='integer' name='[Calculation_1624392097587859463]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[강원]+[경남]+[경북]+[광주]+[대구]+[대전]+[부산]+[세종]+&#13;&#10;[울산]+[전남]+[전북]+[제주]+[충남]+[충북]' />
+      </column>
+      <column caption='f.당월' datatype='boolean' name='[Calculation_543809661907451905]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='DATEDIFF(&apos;month&apos;,[날짜],[Parameters].[매개 변수 1])=0&#13;&#10;AND &#13;&#10;DATEDIFF(&apos;day&apos;,[날짜],[Parameters].[매개 변수 1]) &gt;=0' />
+      </column>
+      <column caption='p. 사망자수 비율' datatype='real' default-format='p0.00%' name='[Calculation_604045306996719621]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[누적 사망자 수]/[누적 확진자 수]' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='Decide' datatype='table' name='[__tableau_internal_object_id__].[Decide_7F2A9B8C74DE45F7BE43BA8AE56D39DE]' role='measure' type='quantitative' />
+      <column caption='f.당월(복사본)' datatype='boolean' name='[f.당월(복사본)_120471297308213248]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='DATEDIFF(&apos;month&apos;,[날짜],[Parameters].[매개 변수 1 1])=0&#13;&#10;AND &#13;&#10;DATEDIFF(&apos;day&apos;,[날짜],[Parameters].[매개 변수 1 1]) &gt;=0' />
+      </column>
+      <column datatype='integer' name='[검사 진행 수]' role='measure' type='quantitative' />
+      <column datatype='datetime' name='[날짜]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[누적 검사 수]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[누적 검사 완료 수]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[누적 격리 해제 수]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[누적 사망자 수]' role='measure' type='quantitative' />
+      <column datatype='real' name='[누적 확진률]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[누적 확진자 수]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[당일 확진자 수]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[치료 중 환자 수]' role='measure' type='quantitative' />
+      <column-instance column='[__tableau_internal_object_id__].[Decide_7F2A9B8C74DE45F7BE43BA8AE56D39DE]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Decide_7F2A9B8C74DE45F7BE43BA8AE56D39DE:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_1100004216009211904]' derivation='Avg' name='[avg:Calculation_1100004216009211904:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_604045306996719621]' derivation='Avg' name='[avg:Calculation_604045306996719621:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[검사 진행 수]' derivation='Avg' name='[avg:검사 진행 수:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[누적 확진률]' derivation='Avg' name='[avg:누적 확진률:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[누적 확진자 수]' derivation='Avg' name='[avg:누적 확진자 수:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[당일 확진자 수]' derivation='Sum' name='[cum:sum:당일 확진자 수:qk:2]' pivot='key' type='quantitative'>
+        <table-calc aggregation='Sum' ordering-field='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[날짜]' ordering-type='Field' type='CumTotal' />
+      </column-instance>
+      <column-instance column='[당일 확진자 수]' derivation='Sum' name='[cum:sum:당일 확진자 수:qk]' pivot='key' type='quantitative'>
+        <table-calc aggregation='Sum' ordering-type='Rows' type='CumTotal' />
+      </column-instance>
+      <column-instance column='[날짜]' derivation='Day' name='[dy:날짜:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[날짜]' derivation='Month' name='[mn:날짜:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[누적 확진률]' derivation='None' name='[none:누적 확진률:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[Calculation_1624392097587499014]' derivation='Sum' name='[sum:Calculation_1624392097587499014:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_1624392097587859463]' derivation='Sum' name='[sum:Calculation_1624392097587859463:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[검사 진행 수]' derivation='Sum' name='[sum:검사 진행 수:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[누적 검사 수]' derivation='Sum' name='[sum:누적 검사 수:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[누적 검사 완료 수]' derivation='Sum' name='[sum:누적 검사 완료 수:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[누적 격리 해제 수]' derivation='Sum' name='[sum:누적 격리 해제 수:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[누적 사망자 수]' derivation='Sum' name='[sum:누적 사망자 수:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[누적 확진률]' derivation='Sum' name='[sum:누적 확진률:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[누적 확진자 수]' derivation='Sum' name='[sum:누적 확진자 수:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[당일 확진자 수]' derivation='Sum' name='[sum:당일 확진자 수:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[치료 중 환자 수]' derivation='Sum' name='[sum:치료 중 환자 수:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[날짜]' derivation='Month-Trunc' name='[tmn:날짜:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[날짜]' derivation='Year' name='[yr:날짜:ok]' pivot='key' type='ordinal' />
+      <group caption='동작(일(날짜))' hidden='true' name='[Action (DAY(날짜))]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[dy:날짜:ok]' />
+        </groupfilter>
+      </group>
+      <group caption='동작(월(날짜))' hidden='true' name='[Action (MONTH(날짜))]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[tmn:날짜:ok]' />
+        </groupfilter>
+      </group>
+      <group caption='동작(년(날짜),월(날짜))' hidden='true' name='[Action (YEAR(날짜),MONTH(날짜))]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[yr:날짜:ok]' />
+          <groupfilter function='level-members' level='[mn:날짜:ok]' />
+        </groupfilter>
+      </group>
+      <group caption='동작(년(날짜),월(날짜),일(날짜))' hidden='true' name='[Action (YEAR(날짜),MONTH(날짜),DAY(날짜))]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[yr:날짜:ok]' />
+          <groupfilter function='level-members' level='[mn:날짜:ok]' />
+          <groupfilter function='level-members' level='[dy:날짜:ok]' />
+        </groupfilter>
+      </group>
+      <group caption='동작(누적 확진률)' hidden='true' name='[Action (누적 확진률)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:누적 확진률:ok]' />
+        </groupfilter>
+      </group>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' palette='tableau10_10_0' type='palette'>
+            <map to='#1ba3c6'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:강원:qk]&quot;</bucket>
+            </map>
+            <map to='#28aa6f'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:경북:qk]&quot;</bucket>
+            </map>
+            <map to='#2bb79f'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:경남:qk]&quot;</bucket>
+            </map>
+            <map to='#30b9bf'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:경기:qk]&quot;</bucket>
+            </map>
+            <map to='#459f3b'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:광주:qk]&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[__tableau_internal_object_id__].[cnt:VaccineSeoul_D6F3229E24954591A11EFBFBF08D5EE8:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[:Measure Names]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[avg:검사 진행 수:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[avg:누적 확진자 수:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[avg:확진자 수:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[pcto:avg:1차 접종률:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[pcto:sum:1차 접종률:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[pcto:sum:확진자 수:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:1차 접종률:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:deathCnt:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:확진자 수:qk]&quot;</bucket>
+            </map>
+            <map to='#4f7cba'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:충북:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[__tableau_internal_object_id__].[cnt:Decide_7F2A9B8C74DE45F7BE43BA8AE56D39DE:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[avg:Calculation_1100004216009211904:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[avg:Calculation_604045306996719621:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:decideCnt:qk]:1&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:누적 격리 해제 수:qk]&quot;</bucket>
+            </map>
+            <map to='#7f72c1'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:충남:qk]&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:누적 검사 완료 수:qk]&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[__tableau_internal_object_id__].[cnt:DistrictRaw_E2256B9C88A0443194B8D38C0803D42B:qk]&quot;</bucket>
+            </map>
+            <map to='#9eb528'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:대구:qk]&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:2021년07월_남여 비율:qk]&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:접종대상자:qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:누적 사망자 수:qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:전일 대비 증감 수:qk]&quot;</bucket>
+            </map>
+            <map to='#b36cc1'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:제주:qk]&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[__tableau_internal_object_id__].[cnt:District_BF123F420AED47489421AEA52399DE08:qk]&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:치료 중 환자 수:qk]&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[avg:누적 확진률:qk]&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:누적 확진률:qk]&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:누적 검사 수:qk]&quot;</bucket>
+            </map>
+            <map to='#dabb21'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:대전:qk]&quot;</bucket>
+            </map>
+            <map to='#e03426'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[attr:대구:qk]&quot;</bucket>
+            </map>
+            <map to='#e06db9'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:전북:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[avg:1차 접종률:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:Calculation_1624392097587499014:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:clearCnt:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:검사 진행 수:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:누적 1차 접종자 수:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:당일 1차 접종자 수:qk]&quot;</bucket>
+            </map>
+            <map to='#e54422'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:세종:qk]&quot;</bucket>
+            </map>
+            <map to='#e93645'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:울산:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:격리 해제 수:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:누적 확진자 수:qk]&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[__tableau_internal_object_id__].[cnt:Population_C0D15F81998841F6BFF763430FDB5D93:qk]&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:해외 유입 수:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[avg:2차 접종률:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[pcto:sum:사망자 수:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:2021년07월_세대당 인구:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:Calculation_1624392097587859463:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:decideCnt:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:누적 2차 접종자 수:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:당일 2차 접종자 수:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:사망자 수:qk]&quot;</bucket>
+            </map>
+            <map to='#f64c74'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:인천:qk]&quot;</bucket>
+            </map>
+            <map to='#f88113'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:서울:qk]&quot;</bucket>
+            </map>
+            <map to='#f8ab1d'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:부산:qk]&quot;</bucket>
+            </map>
+            <map to='#fe7caa'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:전남:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:격리 중 환자 수:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[cum:sum:당일 확진자 수:qk:2]&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[cum:sum:당일 확진자 수:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:당일 확진자 수:qk]&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:2차 접종률:qk]&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:지역 발생 수:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;대한민국&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='기준일' datatype='date' name='[매개 변수 1 1]' param-domain-type='range' role='measure' type='quantitative' value='#2020-06-01#'>
+          <calculation class='tableau' formula='#2020-06-01#' />
+          <range granularity='1' max='#2021-09-01#' min='#2020-04-01#' period-type-v2='month' />
+        </column>
+        <column caption='확진 기준일' datatype='date' name='[매개 변수 1]' param-domain-type='range' role='measure' type='quantitative' value='#2021-01-31#'>
+          <calculation class='tableau' formula='#2021-01-31#' />
+          <range granularity='1' max='#2021-08-31#' min='#2020-03-31#' period-type-v2='month' />
+        </column>
+      </datasource-dependencies>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Decide' id='Decide_7F2A9B8C74DE45F7BE43BA8AE56D39DE'>
+            <properties context=''>
+              <relation connection='mysql.16xwalh0w95ti81bhevr60ao1w01' name='Decide' table='[Decide]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='필터1' name='[Action1_5B9ECDDA30AA4E90A024B7C96D7DC62E]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='대시보드 2' type='sheet' worksheet='검사 진행 수 ' />
+      <command command='tsc:tsl-filter'>
+        <param name='exclude' value='검사 진행 수 ,확진자 사망자 축동기화,확진자 수 ' />
+        <param name='on-empty' value='none' />
+        <param name='special-fields' value='all' />
+        <param name='target' value='대시보드 2' />
+      </command>
+    </action>
+    <action caption='필터2' name='[Action2_0A6CD3AB3FB9403B8CC195EA1BF3BD10]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='대시보드 2' type='sheet' worksheet='확진자 수 ' />
+      <command command='tsc:tsl-filter'>
+        <param name='exclude' value='검사 진행 수 ,검사자 확진자 축동기화 ,확진자 수 ' />
+        <param name='on-empty' value='none' />
+        <param name='special-fields' value='all' />
+        <param name='target' value='대시보드 2' />
+      </command>
+    </action>
+    <action caption='하이라이트1' name='[Action3_AE0762B159494B53A591B21D31DE3685]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='대시보드 2' type='sheet' worksheet='검사자 확진자 축동기화 ' />
+      <command command='tsc:brush'>
+        <param name='exclude' value='검사 진행 수 ,검사자 확진자 축동기화 ,확진자 수 ' />
+        <param name='special-fields' value='date-time' />
+        <param name='target' value='대시보드 2' />
+      </command>
+    </action>
+    <action caption='하이라이트2' name='[Action4_E048BF295D774B649511994902645346]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='대시보드 2' type='sheet' worksheet='확진자 사망자 축동기화' />
+      <command command='tsc:brush'>
+        <param name='exclude' value='검사 진행 수 ,확진자 사망자 축동기화,확진자 수 ' />
+        <param name='special-fields' value='date-time' />
+        <param name='target' value='대시보드 2' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='검사 진행 수 '>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='DistrictRaw(corona19)' name='federated.0b6kdmt0oggmyf1811prm0zs8hm4' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0b6kdmt0oggmyf1811prm0zs8hm4'>
+            <column-instance column='[검사 진행 수]' derivation='Avg' name='[avg:검사 진행 수:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[날짜]' derivation='Month' name='[mn:날짜:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[날짜]' derivation='Year' name='[yr:날짜:ok]' pivot='key' type='ordinal' />
+            <column datatype='integer' name='[검사 진행 수]' role='measure' type='quantitative' />
+            <column datatype='datetime' name='[날짜]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[avg:검사 진행 수:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='background-color' data-class='subtotal' value='#00000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#272c3d' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+            <format attr='color' value='#898989' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[avg:검사 진행 수:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='has-stroke' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>([federated.0b6kdmt0oggmyf1811prm0zs8hm4].[yr:날짜:ok] / [federated.0b6kdmt0oggmyf1811prm0zs8hm4].[mn:날짜:ok])</cols>
+      </table>
+      <simple-id uuid='{FDFA83DA-D568-46EE-AEAD-65F830CBBD31}' />
+    </worksheet>
+    <worksheet name='검사자 확진자 축동기화 '>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='DistrictRaw(corona19)' name='federated.0b6kdmt0oggmyf1811prm0zs8hm4' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0b6kdmt0oggmyf1811prm0zs8hm4'>
+            <column caption='p.검사 대비 확진 확률 ' datatype='real' default-format='n#,##0.00&quot;%&quot;;-#,##0.00&quot;%&quot;' name='[Calculation_1100004216009211904]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[당일 확진자 수]/[검사 진행 수]' />
+            </column>
+            <column-instance column='[Calculation_1100004216009211904]' derivation='Avg' name='[avg:Calculation_1100004216009211904:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[검사 진행 수]' derivation='Avg' name='[avg:검사 진행 수:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[날짜]' derivation='Month' name='[mn:날짜:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1100004216009211904]' derivation='Sum' name='[sum:Calculation_1100004216009211904:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[날짜]' derivation='Month-Trunc' name='[tmn:날짜:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[날짜]' derivation='Year' name='[yr:날짜:ok]' pivot='key' type='ordinal' />
+            <column datatype='integer' name='[검사 진행 수]' role='measure' type='quantitative' />
+            <column datatype='datetime' name='[날짜]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[당일 확진자 수]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[:Measure Names]'>
+            <groupfilter function='level-members' level='[:Measure Names]' />
+          </filter>
+          <filter class='categorical' column='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[Action (YEAR(날짜),MONTH(날짜))]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_5B9ECDDA30AA4E90A024B7C96D7DC62E]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='empty-level' member='[yr:날짜:ok]' />
+              <groupfilter function='empty-level' member='[mn:날짜:ok]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[:Measure Names]</column>
+            <column>[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[Action (YEAR(날짜),MONTH(날짜))]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[avg:Calculation_1100004216009211904:qk]' field-type='quantitative' fold='true' max='0.10000000000000001' min='0.0' range-type='fixed' scope='rows' type='space' />
+            <format attr='height' field='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[tmn:날짜:ok]' value='24' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[tmn:날짜:ok]' value='0' />
+            <format attr='text-format' field='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[tmn:날짜:ok]' value='*yy년 mm월' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#272c3d' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+            <format attr='color' value='#898989' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='11' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-transparency' value='96' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='12' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[avg:검사 진행 수:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-transparency' value='255' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='13' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[avg:Calculation_1100004216009211904:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <text column='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:Calculation_1100004216009211904:qk]' />
+              <color column='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-transparency' value='96' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0b6kdmt0oggmyf1811prm0zs8hm4].[avg:검사 진행 수:qk] + [federated.0b6kdmt0oggmyf1811prm0zs8hm4].[avg:Calculation_1100004216009211904:qk])</rows>
+        <cols>[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[tmn:날짜:ok]</cols>
+      </table>
+      <simple-id uuid='{6EA09EBB-D68E-48FC-97A2-C7F089FD2800}' />
+    </worksheet>
+    <worksheet name='확진자 사망자 축동기화'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='DistrictRaw(corona19)' name='federated.0b6kdmt0oggmyf1811prm0zs8hm4' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0b6kdmt0oggmyf1811prm0zs8hm4'>
+            <column caption='p. 사망자수 비율' datatype='real' default-format='p0.00%' name='[Calculation_604045306996719621]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[누적 사망자 수]/[누적 확진자 수]' />
+            </column>
+            <column-instance column='[Calculation_604045306996719621]' derivation='Avg' name='[avg:Calculation_604045306996719621:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[누적 확진자 수]' derivation='Avg' name='[avg:누적 확진자 수:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[날짜]' derivation='Month' name='[mn:날짜:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[누적 사망자 수]' derivation='Sum' name='[sum:누적 사망자 수:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[누적 확진자 수]' derivation='Sum' name='[sum:누적 확진자 수:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[날짜]' derivation='Month-Trunc' name='[tmn:날짜:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[날짜]' derivation='Year' name='[yr:날짜:ok]' pivot='key' type='ordinal' />
+            <column datatype='datetime' name='[날짜]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[누적 사망자 수]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[누적 확진자 수]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[:Measure Names]'>
+            <groupfilter function='level-members' level='[:Measure Names]' />
+          </filter>
+          <manual-sort column='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:누적 사망자 수:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[sum:누적 확진자 수:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[Action (YEAR(날짜),MONTH(날짜))]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action2_0A6CD3AB3FB9403B8CC195EA1BF3BD10]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='empty-level' member='[yr:날짜:ok]' />
+              <groupfilter function='empty-level' member='[mn:날짜:ok]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[:Measure Names]</column>
+            <column>[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[Action (YEAR(날짜),MONTH(날짜))]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' domain-expand='false' field='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[avg:Calculation_604045306996719621:qk]' field-type='quantitative' fold='true' max='0.10000000000000001' min='0.0' range-type='fixed' scope='rows' type='space' />
+            <format attr='height' field='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[tmn:날짜:ok]' value='24' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[tmn:날짜:ok]' value='0' />
+            <format attr='text-format' field='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[tmn:날짜:ok]' value='*yy년 mm월' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#272c3d' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+            <format attr='color' value='#898989' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[:Measure Names]' value='' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='8' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='9' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[avg:누적 확진자 수:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='10' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[avg:Calculation_604045306996719621:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[:Measure Names]' />
+              <text column='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[avg:Calculation_604045306996719621:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-transparency' value='96' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0b6kdmt0oggmyf1811prm0zs8hm4].[avg:누적 확진자 수:qk] + [federated.0b6kdmt0oggmyf1811prm0zs8hm4].[avg:Calculation_604045306996719621:qk])</rows>
+        <cols>[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[tmn:날짜:ok]</cols>
+      </table>
+      <simple-id uuid='{4F4D4C81-07B6-4304-A55B-5844B731ABC1}' />
+    </worksheet>
+    <worksheet name='확진자 수 '>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='DistrictRaw(corona19)' name='federated.0b6kdmt0oggmyf1811prm0zs8hm4' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0b6kdmt0oggmyf1811prm0zs8hm4'>
+            <column-instance column='[누적 확진자 수]' derivation='Avg' name='[avg:누적 확진자 수:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[날짜]' derivation='Month' name='[mn:날짜:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[날짜]' derivation='Year' name='[yr:날짜:ok]' pivot='key' type='ordinal' />
+            <column datatype='datetime' name='[날짜]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[누적 확진자 수]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='background-color' field='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[yr:날짜:ok]' value='#272c3d' />
+            <format attr='background-color' data-class='subtotal' value='#00000000' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[yr:날짜:ok]' value='true' />
+            <format attr='display' field='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[mn:날짜:ok]' value='false' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[avg:누적 확진자 수:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='background-color' data-class='subtotal' value='#00000000' />
+            <format attr='background-color' data-class='total' value='#00000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#272c3d' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+            <format attr='color' value='#898989' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[avg:누적 확진자 수:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='has-stroke' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>([federated.0b6kdmt0oggmyf1811prm0zs8hm4].[yr:날짜:ok] / [federated.0b6kdmt0oggmyf1811prm0zs8hm4].[mn:날짜:ok])</cols>
+      </table>
+      <simple-id uuid='{32D2AC88-3798-4A54-9106-91AD9E61B488}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='대시보드 2'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='12' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='92866' id='26' param='horz' type-v2='layout-flow' w='94133' x='5408' y='6249'>
+            <zone h='92866' id='24' type-v2='layout-basic' w='94133' x='5408' y='6249'>
+              <zone h='78907' id='22' param='horz' type-v2='layout-flow' w='94133' x='5408' y='20208'>
+                <zone h='78907' id='20' type-v2='layout-basic' w='94133' x='5408' y='20208'>
+                  <zone h='78907' id='15' param='horz' type-v2='layout-flow' w='94133' x='5408' y='20208'>
+                    <zone h='78907' id='13' type-v2='layout-basic' w='94133' x='5408' y='20208'>
+                      <zone h='78907' id='36' param='horz' type-v2='layout-flow' w='94133' x='5408' y='20208'>
+                        <zone h='78907' id='18' name='검사자 확진자 축동기화 ' show-title='false' w='0' x='5408' y='20208'>
+                          <layout-cache minheight='165' type-h='scalable' type-w='cell' />
+                          <zone-style>
+                            <format attr='border-color' value='#000000' />
+                            <format attr='border-style' value='none' />
+                            <format attr='border-width' value='0' />
+                            <format attr='margin' value='4' />
+                            <format attr='background-color' value='#272c3d' />
+                          </zone-style>
+                        </zone>
+                        <zone h='78907' id='11' name='확진자 사망자 축동기화' show-title='false' w='0' x='5408' y='20208'>
+                          <layout-cache type-h='fixed' type-w='cell' />
+                          <zone-style>
+                            <format attr='border-color' value='#000000' />
+                            <format attr='border-style' value='none' />
+                            <format attr='border-width' value='0' />
+                            <format attr='margin' value='4' />
+                            <format attr='background-color' value='#272c3d' />
+                          </zone-style>
+                        </zone>
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='background-color' value='#272c3d' />
+                        </zone-style>
+                      </zone>
+                    </zone>
+                  </zone>
+                </zone>
+              </zone>
+              <zone h='8214' id='23' name='검사 진행 수 ' show-title='false' w='94133' x='5408' y='6249'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='0' />
+                  <format attr='background-color' value='#272c3d' />
+                </zone-style>
+              </zone>
+              <zone h='5745' id='37' name='확진자 수 ' show-title='false' w='94133' x='5408' y='14463'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='0' />
+                  <format attr='background-color' value='#272c3d' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='98230' id='38' param='horz' type-v2='layout-flow' w='4949' x='459' y='885'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='background-color' value='#272c3d' />
+            </zone-style>
+          </zone>
+          <zone forceUpdate='true' h='5364' id='41' type-v2='text' w='94133' x='5408' y='885'>
+            <formatted-text>
+              <run fontcolor='#898989'>여러 값을 선택하고 싶으면 ctrl을 누르시고 선택하세요.</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#898989'>(ex:검사자 수 전체를 보고 싶으면 ctrl을 누르고 검사자 수의 2020,2021 선택,전체 그래프를 보고 싶으면 ctrl누르고 4개의 연도 모두 선택)</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='0' />
+              <format attr='background-color' value='#272c3d' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone forceUpdate='true' h='22566' id='31' type-v2='text' w='5052' x='1033' y='4314'>
+          <formatted-text>
+            <run fontcolor='#898989' fontsize='12'>검사자 수</run>
+            <run>Æ&#10;&#10;&#10;</run>
+            <run fontcolor='#898989' fontsize='12'>확진자 수</run>
+          </formatted-text>
+          <zone-style>
+            <format attr='border-color' value='#272c3d' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='850' minheight='850' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='59' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98230' id='58' param='vert' type-v2='layout-flow' w='99082' x='459' y='885'>
+                <zone forceUpdate='true' h='5364' id='41' type-v2='text' w='94133' x='5408' y='885'>
+                  <formatted-text>
+                    <run fontcolor='#898989'>여러 값을 선택하고 싶으면 ctrl을 누르시고 선택하세요.</run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#898989'>(ex:검사자 수 전체를 보고 싶으면 ctrl을 누르고 검사자 수의 2020,2021 선택,전체 그래프를 보고 싶으면 ctrl누르고 4개의 연도 모두 선택)</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#272c3d' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='22566' id='31' type-v2='text' w='5052' x='1033' y='4314'>
+                  <formatted-text>
+                    <run fontcolor='#898989' fontsize='12'>검사자 수</run>
+                    <run>Æ&#10;&#10;&#10;</run>
+                    <run fontcolor='#898989' fontsize='12'>확진자 수</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#272c3d' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='66' h='8214' id='23' is-fixed='true' name='검사 진행 수 ' show-title='false' w='94133' x='5408' y='6249'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#272c3d' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='46' h='5745' id='37' is-fixed='true' name='확진자 수 ' show-title='false' w='94133' x='5408' y='14463'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#272c3d' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='78907' id='18' is-fixed='true' name='검사자 확진자 축동기화 ' show-title='false' w='0' x='5408' y='20208'>
+                  <layout-cache minheight='165' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#272c3d' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='78907' id='11' is-fixed='true' name='확진자 사망자 축동기화' show-title='false' w='0' x='5408' y='20208'>
+                  <layout-cache type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#272c3d' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{D3BC49D7-EDAF-4084-9020-75F48A807C52}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='확진자 사망자 축동기화'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='28'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='slider' param='[Parameters].[매개 변수 1 1]' type='parameter' />
+            <card pane-specification-id='9' param='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight field='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[:Measure Names]'>
+          <bucket-selection />
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{32136018-C90F-417F-A6D0-FE7D129221F8}' />
+    </window>
+    <window class='worksheet' name='검사자 확진자 축동기화 '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='28'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='slider' param='[Parameters].[매개 변수 1 1]' type='parameter' />
+            <card pane-specification-id='12' param='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <selection-collection>
+          <node-selection select-tuples='false'>
+            <oriented-node-reference orientation='vertical'>
+              <node-reference>
+                <axis>[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[avg:검사 진행 수:qk]</axis>
+              </node-reference>
+              <page-reference />
+            </oriented-node-reference>
+          </node-selection>
+        </selection-collection>
+        <highlight field='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[:Measure Names]'>
+          <bucket-selection />
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{259C37BF-3131-49D0-88D0-31C72463AE21}' />
+    </window>
+    <window class='worksheet' name='검사 진행 수 '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[avg:검사 진행 수:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[avg:검사 진행 수:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{B4B5A6AC-C6B5-40FE-B333-E0226C235E89}' />
+    </window>
+    <window class='worksheet' name='확진자 수 '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[avg:누적 확진자 수:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[avg:누적 확진률:qk]</field>
+            <field>[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[avg:누적 확진자 수:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{46977843-3E32-4B1B-8512-69AB41A3E7FC}' />
+    </window>
+    <window class='dashboard' maximized='true' name='대시보드 2'>
+      <viewpoints>
+        <viewpoint name='검사 진행 수 '>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='검사자 확진자 축동기화 '>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='확진자 사망자 축동기화'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='확진자 수 '>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.0b6kdmt0oggmyf1811prm0zs8hm4].[avg:누적 확진자 수:qk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='37' />
+      <simple-id uuid='{98DE1E3C-F2F5-4722-AA6F-793D1EFA8D9E}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='64' name='검사 진행 수 ' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAABACAYAAABMbHjfAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAEL0lEQVR4nO3d309bZRzH8TelhQJrKRLCz3VDiEPGgEIcm+IYBO9GvDRGF6N/gn/I/oTN
+      i11pTDRZos7IBmiWzA0CgopbpUIGDBiUbsAspfWisLTAwiJLT3eez+uOcx7I8y19055CaE4i
+      kUggYiiH1RsQsZICEKMpADGac/eBhlPnrNiHiCX0CCBGUwBiNAUgRjswgKtXLmViHyKW0COA
+      GE0BiNEUgBhNAYjRFIAYTQGI0RSAGE0BiNEUgBhNAYjRFIAYTQGI0RSAGE0BiNEUgBhNAYjR
+      FIAYTQGI0RSAGE0BiNEUgBhNAYjRFIAYTQGI0RSAGG3Pf4fOBE9tM+cDVZQWOXHEYzxZuEf/
+      T0GW4snzBZUNdHUco9zjIheIb64zPznGwMgSG7Vt9CSG6Q9ZsfPD8tLW9y6tjiDffPsny9tH
+      7TdvNb0XA/hTjqyOD/L1SATIrnktCMCJ173OaH8/s+EoMWceVS1n6W5f5qtfVwAvJ9u8zN64
+      wfer0eSnuI/Q/HaAkyVD3MGBIyfzu34ZCk40cmz2b2ZqUo/acN7iIo78c5fLg3P7nMyueS0I
+      IMaDP+6nfBhlNrRAtMG1fSDCxHCEru5uArt/QqwAvszv+KVw19D5+ipDP0RorfGknLDhvJ5C
+      th7PP+dkds1r7TWAw0VxRS09HT6Cvy8A4Gvp4sPeeqq2b5zkskKqms7wwblK6/Z6KA6Ottey
+      Njz57GneDjvOm1/kZiMc2fdcts1ryTUAQN35C3QdhVh4hltDt7kXTh4Pjw5weXR7UembvOd/
+      wI8jKTdmbXXG93pYjvJGmmMTfPcwvuecHectcOfjP32BzzqBrU2W5yb5eSDEUjz75rUsgODN
+      awTJxe3zUdd8lp6Z2/RPRdPWFFfkMnc/QvpFVYLQkAUb/t+8tAWcjF1fZu/dP5095k2/kzvy
+      iqg5FaCnY40vby2mrcuGeS0LIGmLp+FHTAxOUdl3HN/UX4QB/AE+6apOPkS2Hed06qfEozyN
+      7ve1stTxeprKqmj+KO3KF//FCsau3eTOCvaad5d4dI3pu1O80VeCj8Ws+/5aEEAZTW+5eDix
+      yKP1TeIOF6UnaijbmGNjZ0ksRjQOBXb4LUVomC9CwykHqul938NwysugtpoXL63ddWz8NkFw
+      KUrMWYi/vZ6S+THCO0uyaF4LAljjcayRd/paeC0vF+IxniyEGBya5t9na3JwPO/GceRTWe6F
+      2f0vsl5Ndpo3wvjIEp2d3ZwpcZEbjxGeHuf6Lyspa7Jn3pxEIpFIPbD7bVKvXrnEx59+npHN
+      iGRaFjwIiVhHAYjRFIAYTQGI0V7oVSC9V7DY1QsFsFLhOXiRTbxyf3l5SImDl9jKVjx9Yj0F
+      EqMpADGaAhCjKQAxmgIQoykAMZoCEKMpADGaAhCjKQAxmgIQoykAMZoCEKMpADHaf7QQjLb3
+      xlQlAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='검사자 확진자 축동기화 ' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='대시보드 2' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAPe0lEQVR4nO3dy5Lb2H2A8e/gHIAAARDgpZut1kgjZZy5Vdm5LLNJpbLOK+QVsslT5B3y
+      LNk4q1QWjl2xPbEcR5rRqC9s3ok7kAXbqlFJHsszpNry+f9WJKUGD5v4iDtbdV3XIYSlnLse
+      gBB3yQB0XcdnP/rbux6LEO+cLAGE1Y4egNKGQehjtCYI+wwHfYzWAIwnQ/q+h9aKMAqZng4x
+      jgLAGI3RGqU105MUv+ehgMkkxTUa5Wim0zGno/i3z4TWCqM1jjZMT4d4xqEfhaRx8PI5Xx2c
+      whhNOkw4GQ9QgP7G/zOux9l0zCgJ9/e1g9Eat9fjbDpmOOjvJ+NoHLX/9yRNiEMfox3CKCIM
+      PLSj0Hr/eox28Ho9Ticpty9V3CFz7CcYJSHaGJIE5uuCMAqIooBnz2coFL4fEg8q0tGUwHOg
+      Lrlc5JxOJySB4dcXa0LP5eQH93ny5IKHH0xZ9D2efXXF7HpBP+6jgX4SE7odRd3huB7acZiM
+      B2RFQz9OmQxLnjybMT0dEvZ9ZjdLjNEo5XDv3gkOHfluR2sCkr5HWRZktcIBXFeD0kxPEnZZ
+      yXy54fq6ZhDvA0jTmEHUZ7deEsQhnhmwWi6IRxNUk7NZbanQDIKA+WpBEMaormM0CLheZsd+
+      C8S3OPoSoEXR910AfN+jaVuyvATgZHrCgw+GZJsSv9/n3nSM6lqMMRgFRdXQ5AVhElHkBa2C
+      m9mcuq7BeDx+dM7JMMbRirpu6IcDjNNRVTVt11GWNUEcM/AdNrsSx+vRM5BlBb2ey2q1pW0a
+      kmHK2WlK0zR0bUMY9dHGYIzmdDpmPIxJkogWhWcU/TDk8aNz0iREAX7Po6pr2rYFR0Pb0rUt
+      2XZHltdkWUnXdjRtA0rheYae70EHnnv0zyDxLVS3d/SNYKM1ddO8dvttaa1pbn/GcRRt++re
+      W78fkMZ98mzHYvX9PlW/bXxvO3ajHeqm3Y9XKdquu10N614+Lu7e0T9+lKNxaF6Zaf7QmR94
+      OfMDr838APku48XuMKsT3za+tx37N2fy9vZQy3d53eK4jh5AHPqs1lu0AscYHK1RwKMP71Fn
+      Gb96esFknNDUDetdyZ99OGW1WPHiekkUR6RxwGa9YbHO+OSzj6jzkquL53zw6DGr2ZrlbsFf
+      /vVfELnw4x//J20QMfIMpqd5+vWck9GAnuvwf19eEacpps7ptMYP+igFTZHhBiFJErOeXfHs
+      csV4NCDsB1xf3dDrR7RVxgcP70OV8/MvvmR4MsJ1FEWWoXohH94bspzPeT7bkMZ9NB1fXcy5
+      d/+MQai5+PIK5fvkmxJ0xXh6Btsds/WSqtGcThLaumKxrTifDmiLkt88nzEaDwl6+1WxfJfj
+      Bj6qadBG8+WzF4RJQhL26ByHKs9Rnk+TbTGu4fnFnHgwYBD1qIqc9GSKqjIWyzUX1ysePHpI
+      38Ds6pLk9B7Ndsdiu2K5KTkdp/i+4ep6zZ8/PmOx3vH18ysefnhO19R8ebXm7/7mh1S7Nf/2
+      7z9jfDpBqw6jOmarnCQOcLqW55dzTqcTtlmOLjLS6ZS261hezRmfjRhNUn79s1+ybhyGg4gw
+      0FxcbximIXlZ0/cMRVGQNZqPH00pdhu+eDpjMozwjOLpV9eMT88w9ZpeFFNWinxxSTKd0gDL
+      5y8giJgMY5K+y5NnM+LQoyxKrudrzu6dHH8bwOu5PHhwj/Eo5ux8iqpLOsejrQqKukZ7PZIk
+      Ig59aGvKqgJtMM5+tce4+xkApVndzJmvttRNx3q1RrsuytEoOkDhupoyK3B9jywraKqKIi9Y
+      rHYAuEYznIxwuobrmyVtXTNbbADFi69eMN8URGlCud2y3e4IBxFFUeH5PvfPJ9w/P8HVirKo
+      CHwP1zUUWcbXFzNmiw35LiMvSjZZAQrCwGW9yambjsD3GY9jgp5Lscspmo7A93C0g3YNxlEY
+      BwLfx7ndE9W1Ldc3a3brLUo7ZJsN26JitS3QDnRdy+X1kny3o3M0Vbbj6mbNLq/3v3sN17MV
+      u7yirGr6QY/udulZZ1suZivyqmGz3qCc2+dsGi4uZ8yXO4zj8OQ3XxNFPgBZXpDnJUY7dF2H
+      0hrjKLIsJ/A9dllBttuRFyXbvATlYLTD2SSlajuuZwvy7YZ1XoJSPPnVM8qmYzyMWSzWbLY5
+      aRJSlA11VeH2PFxjaKqSFxczLq5X1GVBXhQs1xk4hkHUww96NFWF6Xloo/FcD9dRKKBqW5o8
+      48nTS4qyxOt5OLdzfZaXx98GSNIBZVHg0FHWLdoY6rJkPBnSViXzdUZTNQSBR1k3tHVD2O+x
+      3ubAfgMzL/YbzcNRSs91uJktcVxD4Hps8x1RPMDTitlsju75pHGfrmvZbHPiaH/76mpOOEhI
+      Y5/1fIHjB3hGk2c7ysZhEPlsVms2ecUojSirlqYqyKsO7cBolKC6lsurBd03xhUPYsLAo6lK
+      8pqXt69u1iRpQtDTzGZLuq5Da5emrVAojHEpq4Km6TCeR1eVNLdrdr+d9mic0pYFrdL7+2nM
+      crGi13PplANKY6gpGkVVFKTDAdkup9/vcX01p9fvE4c+69WKbVbtpx34+EbRKEMYeCwXKzrl
+      7J8zz2jQjNMI6JjP10ShT922FEVNmuwfv7lZMRwOoG24vF4SJwP6vktdFpSt8/L29XzDyekE
+      33W4up6TJDFKKdbLFW7Qx/cMN7MbGmWIfUPnaHbbjA5o6gav51EUJUHYJ4kCurZhk1XEoU/X
+      NrfvhYNroKpb/DCEYkdedyjXxW1qKpyXS9h1VpMO+tC1XF7OSUbpu9sIFuKPkRwJFlY7agCf
+      fvLRMScvxPcmR2HEaxzjcm86ZLXckMQBq11J6GmKVtFVBfPbnQp/CmQVSLymrSs6pTk7Tckb
+      MG1L0O8RBS7xILrr4R2ULAHEa/xoQOh23Cwz0tin7ftsN2u0F9DVxV0P76AkAPGafLPifzYr
+      AGazb/7L6k7Gc0yyCiSsdudLAM/3maR9FquMJO6z3WxZ3R4E+76UchgPQ6rWIXAVi9Xu5UG1
+      72tyMibfbuhHIW1Vs1pvKesDnOujHM5OUxbLLcM0oshz5osth7hwux+FDOOA1SYj6vdYrbZs
+      s8Os0qTDFKct6UwP07Wstzvyovr+E1YOZ6cjFosVaRpTVxXz+erlQcPvzNGcpOHdLwHKosLz
+      e/g9n0ePzrl/mh5s2ukwxjWaQTrg8aNzRoPgQFNW+D0Xow1n56d8+GCK773hgpvvwI9iAk/j
+      +z0ePLjHw/snHOq6md1mS1FWeEGfx4/PORvHv/+H3lIQ9PB9n/FkxOOHZyRh7yDTVVpjNJxM
+      Us7vT3n0cIpxDjDbtg1V0919AH7gUVUNnaNIBxGD+FAzKXSdwvc9HG1I02R/wc2BFEWJ1uB6
+      PqenQ+gOc4pzle0oGgVdx2AQMUrCg3z6A2jXI9tu6ZQmiWOiA82ksD9bt20btDaMT0YYdZhR
+      d3VN2cDiZkEQRZyMB3CALzJR2pCm0XFPhfj0k4/4xS+fHHy6QhzKUbcBPv+rz/mnf/lnAL74
+      6Rd8/MOPDzbt9/Fy2g54w6UMf/Saow76OO+ko3ira66PGkDnKGpv/xSNq1/ePgQFqCP87o75
+      Vrddd4il97c4zsxUHfEKNnWMN5H97k39FgW8eaXY0ZxNxwzC3v5cfMC4BsX+nHqUw3Q65uxk
+      /w0N3yTXuIr3yZsDaBteXMwYn57w4HwCQDpOcRWkaQRdy6royFaL/f1b6WjIo4dTXP0+rqAI
+      G70xAEcbPv/8I9qyoCz3+3LrvGR8OiToh2gFYc/QC/v0f3t/kDCOe+Rlw6OH03f6IoT4rt64
+      vtI2NetNRlW3t9fyuuTbDXXdI2haWsfQFVtq7VHstjQdbFdLnqxXnJ2kPH02f9evQ4jv5Heu
+      sD97+vyV+zlAlbHZ7L95YbaoX/+hruPFpcz84v1x5wfChLhLRz0Q9uHD+/SD/TcKbHcZYf9w
+      R3mFOISj7rMMAp+fy5Fg8UdMdtqL12jjcn4+oS4KAt9jsdoxiHzKZn9J5NdXi7se4sFIAOI1
+      bXu798/zWGUVvtHUVYU2Lqrn3fXwDkoCEK9x/f03rS3WGUnkU7UOdVXRVMglkX+IKOzz2e1X
+      o8hG8PsnipM3Pj49e8cDOaKjBvDw08f8/T/+AwBf/Ncv+fhHnxxs2sc6QfGY56od8w9yHvOE
+      zWOdDdp2HeWRvjD7bU88lOMAwmq/Ywng8IOPH2Kagmdf37DNKu6dn6DrgvkqZ5uX37ifvXJd
+      aRwFrDfyZ3/E++F3LAFalNJoRzGejNG01I2irkqC0N+fDbqr2SwX9MP9gS7jetw/P2U0HDAZ
+      /ml9eZL40/XGAIzr4fsecTLAqTNaxyXQNXnn0lb7c4DiniYYJC/PBtXGoWkaXNfFOcRFy0K8
+      A29cBaqrkp/+5OcApElI11TkNfieoSlblDZslgs6bfDL/VdUNFnOi6xgNIy4ma/f6YsQ4rv6
+      vXuBFsstAJcX1688vl/NL9m+8mgnM794rxx1N+gvfvIL6n/drzJdX8343//474NN+z28tvyo
+      jvr7ONLu2+54k37r34f8hRhhNdlaFVaTAITVJABhNQlAWE0CEFaTAITVJABhNQlAWE0CEFaT
+      AITVJABhNQlAWE0CEFaTAITVJABhNQlAWE0CEFaTAITVJABhNQlAWE0CEFaTAITVJABhNQlA
+      WE0CEFaTAITVJABhNQlAWE0CEFaTAITVJABhNQlAWE0CEFaTAITVJABhNQlAWE0CEFaTAITV
+      JABhNQlAWE0CEFaTAITVJABhNQlAWE0CEFaTAITVJABhNQlAWE0CEFaTAITVJABhNQlAWE0C
+      EFaTAITVJABhNQlAWE0CEFaTAITVJABhNQlAWE0CEFaTAITVJABhNQlAWE0CEFaTAITVJABh
+      NQlAWE0CEFaTAITVJABhNQlAWE0CEFaTAITVJABhNQlAWE0CEFaTAITVJABhNQlAWE0CEFaT
+      AITVJABhNQlAWE0CEFaTAITVJABhNQlAWE0CEFaTAITVJABhNQlAWE0CEFaTAITVJABhNQlA
+      WE0CEFaTAITVJABhNQlAWE0CEFaTAITVJABhNQlAWE0CEFaTAITVJABhNQlAWE0CEFaTAITV
+      JABhNQlAWE0CEFaTAITVJABhNQlAWE0CEFaTAITVJABhNQlAWE0CEFaTAITVJABhNQlAWE0C
+      EFaTAITVJABhNQlAWE0CEFaTAITVJABhNQlAWE0CEFaTAITVJABhNQlAWE0CEFaTAITVJABh
+      NQlAWE0CEFaTAITVJABhNQlAWE0CEFb7f64H5hFyAJOaAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='44' name='확진자 수 ' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAAAsCAYAAAAzWrf+AAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAAzUlEQVR4nO3csREBURRA0WWkCtCBRAtK1IJEgxqw8mWGhG/cc8IfvQ3u/J/sW83zPE8Q
+      tR49AIwkANIEQNpmebA/HEfMAUO4AUgTAGkCIO1lAJfz6RtzwBBuANIEQJoASBMAaQIgTQCk
+      CYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASHvYC/SM/4L5V28FcN1tPz3Hz7jF
+      VgXHPnda7oL2BCJNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRA2h0UVA+f/IAR
+      tgAAAABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>

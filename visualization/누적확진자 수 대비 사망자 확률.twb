@@ -1,0 +1,1493 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20212.21.0712.0907                               -->
+<workbook original-version='18.1' source-build='2021.2.1 (20212.21.0712.0907)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='하루 일자' datatype='date' name='[매개 변수 1]' param-domain-type='range' role='measure' type='quantitative' value='#2020-04-14#'>
+        <calculation class='tableau' formula='#2020-04-14#' />
+        <range max='#2021-08-15#' min='#2020-03-02#' />
+      </column>
+    </datasource>
+    <datasource caption='corona19' inline='true' name='federated.1fzeyrp0k680ij1afjdm40i2x3rw' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='52.78.90.155' name='mysql.17k92br1q4s71218jw54s0u23wsz'>
+            <connection class='mysql' dbname='corona19' odbc-native-protocol='' one-time-sql='' port='3306' server='52.78.90.155' source-charset='' username='ogu04' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='mysql.17k92br1q4s71218jw54s0u23wsz' name='Decide' table='[Decide]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='mysql.17k92br1q4s71218jw54s0u23wsz' name='Decide' table='[Decide]' type='table' />
+          <relation connection='mysql.17k92br1q4s71218jw54s0u23wsz' name='DistrictRaw' table='[DistrictRaw]' type='table' />
+          <relation connection='mysql.17k92br1q4s71218jw54s0u23wsz' name='District' table='[District]' type='table' />
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[강원]' value='[District].[강원]' />
+          <map key='[검사 진행 수]' value='[Decide].[검사 진행 수]' />
+          <map key='[격리 중 환자 수]' value='[DistrictRaw].[격리 중 환자 수]' />
+          <map key='[격리 해제 수]' value='[DistrictRaw].[격리 해제 수]' />
+          <map key='[경기]' value='[District].[경기]' />
+          <map key='[경남]' value='[District].[경남]' />
+          <map key='[경북]' value='[District].[경북]' />
+          <map key='[광주]' value='[District].[광주]' />
+          <map key='[날짜 (District)]' value='[District].[날짜]' />
+          <map key='[날짜 (DistrictRaw)]' value='[DistrictRaw].[날짜]' />
+          <map key='[날짜]' value='[Decide].[날짜]' />
+          <map key='[누적 검사 수]' value='[Decide].[누적 검사 수]' />
+          <map key='[누적 검사 완료 수]' value='[Decide].[누적 검사 완료 수]' />
+          <map key='[누적 격리 해제 수]' value='[Decide].[누적 격리 해제 수]' />
+          <map key='[누적 사망자 수]' value='[Decide].[누적 사망자 수]' />
+          <map key='[누적 확진률]' value='[Decide].[누적 확진률]' />
+          <map key='[누적 확진자 수]' value='[Decide].[누적 확진자 수]' />
+          <map key='[당일 확진자 수]' value='[Decide].[당일 확진자 수]' />
+          <map key='[대구]' value='[District].[대구]' />
+          <map key='[대전]' value='[District].[대전]' />
+          <map key='[부산]' value='[District].[부산]' />
+          <map key='[사망자 수]' value='[DistrictRaw].[사망자 수]' />
+          <map key='[서울]' value='[District].[서울]' />
+          <map key='[세종]' value='[District].[세종]' />
+          <map key='[울산]' value='[District].[울산]' />
+          <map key='[인천]' value='[District].[인천]' />
+          <map key='[전남]' value='[District].[전남]' />
+          <map key='[전북]' value='[District].[전북]' />
+          <map key='[전일 대비 증감 수]' value='[DistrictRaw].[전일 대비 증감 수]' />
+          <map key='[제주]' value='[District].[제주]' />
+          <map key='[지역 발생 수]' value='[DistrictRaw].[지역 발생 수]' />
+          <map key='[지역명(En)]' value='[DistrictRaw].[지역명(En)]' />
+          <map key='[지역명]' value='[DistrictRaw].[지역명]' />
+          <map key='[충남]' value='[District].[충남]' />
+          <map key='[충북]' value='[District].[충북]' />
+          <map key='[치료 중 환자 수]' value='[Decide].[치료 중 환자 수]' />
+          <map key='[해외 유입 수]' value='[DistrictRaw].[해외 유입 수]' />
+          <map key='[확진자 수]' value='[DistrictRaw].[확진자 수]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>날짜</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[날짜]</local-name>
+            <parent-name>[Decide]</parent-name>
+            <remote-alias>날짜</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Decide_E64B59E5ABC54D30A98C35EF88FE5B09]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>당일 확진자 수</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[당일 확진자 수]</local-name>
+            <parent-name>[Decide]</parent-name>
+            <remote-alias>당일 확진자 수</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Decide_E64B59E5ABC54D30A98C35EF88FE5B09]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>검사 진행 수</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[검사 진행 수]</local-name>
+            <parent-name>[Decide]</parent-name>
+            <remote-alias>검사 진행 수</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Decide_E64B59E5ABC54D30A98C35EF88FE5B09]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>누적 확진자 수</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[누적 확진자 수]</local-name>
+            <parent-name>[Decide]</parent-name>
+            <remote-alias>누적 확진자 수</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Decide_E64B59E5ABC54D30A98C35EF88FE5B09]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>누적 사망자 수</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[누적 사망자 수]</local-name>
+            <parent-name>[Decide]</parent-name>
+            <remote-alias>누적 사망자 수</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Decide_E64B59E5ABC54D30A98C35EF88FE5B09]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>누적 격리 해제 수</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[누적 격리 해제 수]</local-name>
+            <parent-name>[Decide]</parent-name>
+            <remote-alias>누적 격리 해제 수</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Decide_E64B59E5ABC54D30A98C35EF88FE5B09]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>치료 중 환자 수</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[치료 중 환자 수]</local-name>
+            <parent-name>[Decide]</parent-name>
+            <remote-alias>치료 중 환자 수</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Decide_E64B59E5ABC54D30A98C35EF88FE5B09]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>누적 확진률</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[누적 확진률]</local-name>
+            <parent-name>[Decide]</parent-name>
+            <remote-alias>누적 확진률</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Decide_E64B59E5ABC54D30A98C35EF88FE5B09]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>누적 검사 수</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[누적 검사 수]</local-name>
+            <parent-name>[Decide]</parent-name>
+            <remote-alias>누적 검사 수</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Decide_E64B59E5ABC54D30A98C35EF88FE5B09]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>누적 검사 완료 수</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[누적 검사 완료 수]</local-name>
+            <parent-name>[Decide]</parent-name>
+            <remote-alias>누적 검사 완료 수</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Decide_E64B59E5ABC54D30A98C35EF88FE5B09]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>날짜</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[날짜 (DistrictRaw)]</local-name>
+            <parent-name>[DistrictRaw]</parent-name>
+            <remote-alias>날짜</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DistrictRaw_35DC610FB77D4150962FEF4A76C78A82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>지역명</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[지역명]</local-name>
+            <parent-name>[DistrictRaw]</parent-name>
+            <remote-alias>지역명</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>21845</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WLONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DistrictRaw_35DC610FB77D4150962FEF4A76C78A82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>지역명(En)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[지역명(En)]</local-name>
+            <parent-name>[DistrictRaw]</parent-name>
+            <remote-alias>지역명(En)</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>21845</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='290' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WLONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DistrictRaw_35DC610FB77D4150962FEF4A76C78A82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>확진자 수</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[확진자 수]</local-name>
+            <parent-name>[DistrictRaw]</parent-name>
+            <remote-alias>확진자 수</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DistrictRaw_35DC610FB77D4150962FEF4A76C78A82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>사망자 수</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[사망자 수]</local-name>
+            <parent-name>[DistrictRaw]</parent-name>
+            <remote-alias>사망자 수</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DistrictRaw_35DC610FB77D4150962FEF4A76C78A82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>전일 대비 증감 수</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[전일 대비 증감 수]</local-name>
+            <parent-name>[DistrictRaw]</parent-name>
+            <remote-alias>전일 대비 증감 수</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DistrictRaw_35DC610FB77D4150962FEF4A76C78A82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>격리 해제 수</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[격리 해제 수]</local-name>
+            <parent-name>[DistrictRaw]</parent-name>
+            <remote-alias>격리 해제 수</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DistrictRaw_35DC610FB77D4150962FEF4A76C78A82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>격리 중 환자 수</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[격리 중 환자 수]</local-name>
+            <parent-name>[DistrictRaw]</parent-name>
+            <remote-alias>격리 중 환자 수</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DistrictRaw_35DC610FB77D4150962FEF4A76C78A82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>지역 발생 수</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[지역 발생 수]</local-name>
+            <parent-name>[DistrictRaw]</parent-name>
+            <remote-alias>지역 발생 수</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DistrictRaw_35DC610FB77D4150962FEF4A76C78A82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>해외 유입 수</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[해외 유입 수]</local-name>
+            <parent-name>[DistrictRaw]</parent-name>
+            <remote-alias>해외 유입 수</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DistrictRaw_35DC610FB77D4150962FEF4A76C78A82]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>날짜</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[날짜 (District)]</local-name>
+            <parent-name>[District]</parent-name>
+            <remote-alias>날짜</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[District_3A32CCEFCB63482B85573BBE762CCC54]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>서울</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[서울]</local-name>
+            <parent-name>[District]</parent-name>
+            <remote-alias>서울</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[District_3A32CCEFCB63482B85573BBE762CCC54]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>부산</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[부산]</local-name>
+            <parent-name>[District]</parent-name>
+            <remote-alias>부산</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[District_3A32CCEFCB63482B85573BBE762CCC54]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>대구</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[대구]</local-name>
+            <parent-name>[District]</parent-name>
+            <remote-alias>대구</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[District_3A32CCEFCB63482B85573BBE762CCC54]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>인천</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[인천]</local-name>
+            <parent-name>[District]</parent-name>
+            <remote-alias>인천</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[District_3A32CCEFCB63482B85573BBE762CCC54]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>광주</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[광주]</local-name>
+            <parent-name>[District]</parent-name>
+            <remote-alias>광주</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[District_3A32CCEFCB63482B85573BBE762CCC54]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>대전</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[대전]</local-name>
+            <parent-name>[District]</parent-name>
+            <remote-alias>대전</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[District_3A32CCEFCB63482B85573BBE762CCC54]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>울산</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[울산]</local-name>
+            <parent-name>[District]</parent-name>
+            <remote-alias>울산</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[District_3A32CCEFCB63482B85573BBE762CCC54]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>세종</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[세종]</local-name>
+            <parent-name>[District]</parent-name>
+            <remote-alias>세종</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[District_3A32CCEFCB63482B85573BBE762CCC54]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>경기</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[경기]</local-name>
+            <parent-name>[District]</parent-name>
+            <remote-alias>경기</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[District_3A32CCEFCB63482B85573BBE762CCC54]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>강원</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[강원]</local-name>
+            <parent-name>[District]</parent-name>
+            <remote-alias>강원</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[District_3A32CCEFCB63482B85573BBE762CCC54]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>충북</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[충북]</local-name>
+            <parent-name>[District]</parent-name>
+            <remote-alias>충북</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[District_3A32CCEFCB63482B85573BBE762CCC54]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>충남</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[충남]</local-name>
+            <parent-name>[District]</parent-name>
+            <remote-alias>충남</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[District_3A32CCEFCB63482B85573BBE762CCC54]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>전북</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[전북]</local-name>
+            <parent-name>[District]</parent-name>
+            <remote-alias>전북</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[District_3A32CCEFCB63482B85573BBE762CCC54]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>전남</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[전남]</local-name>
+            <parent-name>[District]</parent-name>
+            <remote-alias>전남</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[District_3A32CCEFCB63482B85573BBE762CCC54]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>경북</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[경북]</local-name>
+            <parent-name>[District]</parent-name>
+            <remote-alias>경북</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[District_3A32CCEFCB63482B85573BBE762CCC54]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>경남</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[경남]</local-name>
+            <parent-name>[District]</parent-name>
+            <remote-alias>경남</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[District_3A32CCEFCB63482B85573BBE762CCC54]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>제주</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[제주]</local-name>
+            <parent-name>[District]</parent-name>
+            <remote-alias>제주</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[District_3A32CCEFCB63482B85573BBE762CCC54]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='p.사망자 확률' datatype='real' default-format='p0.00%' name='[Calculation_548594736586604544]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[누적 사망자 수]/[누적 확진자 수]' />
+      </column>
+      <column caption='일자' datatype='boolean' name='[Calculation_548594736600072193]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='DATEDIFF(&quot;month&quot;,[날짜 (District)],[Parameters].[매개 변수 1])=0&#13;&#10;and&#13;&#10;DATEDIFF(&quot;day&quot;,[날짜 (District)],[Parameters].[매개 변수 1])&gt;=0' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='Decide' datatype='table' name='[__tableau_internal_object_id__].[Decide_E64B59E5ABC54D30A98C35EF88FE5B09]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='DistrictRaw' datatype='table' name='[__tableau_internal_object_id__].[DistrictRaw_35DC610FB77D4150962FEF4A76C78A82]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='District' datatype='table' name='[__tableau_internal_object_id__].[District_3A32CCEFCB63482B85573BBE762CCC54]' role='measure' type='quantitative' />
+      <column datatype='date' datatype-customized='true' name='[날짜 (District)]' role='dimension' type='ordinal' />
+      <column datatype='date' datatype-customized='true' name='[날짜 (DistrictRaw)]' role='dimension' type='ordinal' />
+      <column datatype='date' datatype-customized='true' name='[날짜]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[누적 사망자 수]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[누적 확진자 수]' role='measure' type='quantitative' />
+      <column datatype='string' name='[지역명]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column-instance column='[Calculation_548594736586604544]' derivation='Avg' name='[avg:Calculation_548594736586604544:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[누적 사망자 수]' derivation='Sum' name='[pcto:sum:누적 사망자 수:qk:2]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Columns' type='PctTotal' />
+      </column-instance>
+      <column-instance column='[누적 사망자 수]' derivation='Sum' name='[pcto:sum:누적 사망자 수:qk:4]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='RowInPane' type='PctTotal' />
+      </column-instance>
+      <column-instance column='[누적 사망자 수]' derivation='Sum' name='[pcto:sum:누적 사망자 수:qk:6]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Pane' type='PctTotal' />
+      </column-instance>
+      <column-instance column='[누적 사망자 수]' derivation='Sum' name='[pcto:sum:누적 사망자 수:qk:7]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Table' type='PctTotal' />
+      </column-instance>
+      <column-instance column='[누적 사망자 수]' derivation='Sum' name='[pcto:sum:누적 사망자 수:qk:8]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='CellInPane' type='PctTotal' />
+      </column-instance>
+      <column-instance column='[누적 사망자 수]' derivation='Sum' name='[pcto:sum:누적 사망자 수:qk]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Rows' type='PctTotal' />
+      </column-instance>
+      <column-instance column='[Calculation_548594736586604544]' derivation='Sum' name='[sum:Calculation_548594736586604544:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[누적 사망자 수]' derivation='Sum' name='[sum:누적 사망자 수:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[누적 확진자 수]' derivation='Sum' name='[sum:누적 확진자 수:qk]' pivot='key' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1fzeyrp0k680ij1afjdm40i2x3rw].[pcto:sum:누적 사망자 수:qk:2]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1fzeyrp0k680ij1afjdm40i2x3rw].[pcto:sum:누적 사망자 수:qk:4]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1fzeyrp0k680ij1afjdm40i2x3rw].[pcto:sum:누적 사망자 수:qk:6]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1fzeyrp0k680ij1afjdm40i2x3rw].[pcto:sum:누적 사망자 수:qk:7]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1fzeyrp0k680ij1afjdm40i2x3rw].[pcto:sum:누적 사망자 수:qk:8]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1fzeyrp0k680ij1afjdm40i2x3rw].[pcto:sum:누적 사망자 수:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1fzeyrp0k680ij1afjdm40i2x3rw].[sum:누적 사망자 수:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1fzeyrp0k680ij1afjdm40i2x3rw].[sum:누적 확진자 수:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1fzeyrp0k680ij1afjdm40i2x3rw].[avg:Calculation_548594736586604544:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1fzeyrp0k680ij1afjdm40i2x3rw].[sum:Calculation_548594736586604544:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;대한민국&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='하루 일자' datatype='date' name='[매개 변수 1]' param-domain-type='range' role='measure' type='quantitative' value='#2020-04-14#'>
+          <calculation class='tableau' formula='#2020-04-14#' />
+          <range max='#2021-08-15#' min='#2020-03-02#' />
+        </column>
+      </datasource-dependencies>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Decide' id='Decide_E64B59E5ABC54D30A98C35EF88FE5B09'>
+            <properties context=''>
+              <relation connection='mysql.17k92br1q4s71218jw54s0u23wsz' name='Decide' table='[Decide]' type='table' />
+            </properties>
+          </object>
+          <object caption='DistrictRaw' id='DistrictRaw_35DC610FB77D4150962FEF4A76C78A82'>
+            <properties context=''>
+              <relation connection='mysql.17k92br1q4s71218jw54s0u23wsz' name='DistrictRaw' table='[DistrictRaw]' type='table' />
+            </properties>
+          </object>
+          <object caption='District' id='District_3A32CCEFCB63482B85573BBE762CCC54'>
+            <properties context=''>
+              <relation connection='mysql.17k92br1q4s71218jw54s0u23wsz' name='District' table='[District]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[날짜]' />
+              <expression op='[날짜 (DistrictRaw)]' />
+            </expression>
+            <first-end-point object-id='Decide_E64B59E5ABC54D30A98C35EF88FE5B09' />
+            <second-end-point object-id='DistrictRaw_35DC610FB77D4150962FEF4A76C78A82' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[날짜]' />
+              <expression op='[날짜 (District)]' />
+            </expression>
+            <first-end-point object-id='Decide_E64B59E5ABC54D30A98C35EF88FE5B09' />
+            <second-end-point object-id='District_3A32CCEFCB63482B85573BBE762CCC54' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='누적확진자 수 대비 사망자 확률 '>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='corona19' name='federated.1fzeyrp0k680ij1afjdm40i2x3rw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1fzeyrp0k680ij1afjdm40i2x3rw'>
+            <column caption='p.사망자 확률' datatype='real' default-format='p0.00%' name='[Calculation_548594736586604544]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[누적 사망자 수]/[누적 확진자 수]' />
+            </column>
+            <column-instance column='[Calculation_548594736586604544]' derivation='Avg' name='[avg:Calculation_548594736586604544:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[날짜]' derivation='Month' name='[mn:날짜:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[누적 확진자 수]' derivation='Sum' name='[sum:누적 확진자 수:qk]' pivot='key' type='quantitative' />
+            <column datatype='date' datatype-customized='true' name='[날짜]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[누적 사망자 수]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[누적 확진자 수]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1fzeyrp0k680ij1afjdm40i2x3rw].[sum:누적 확진자 수:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.1fzeyrp0k680ij1afjdm40i2x3rw].[avg:Calculation_548594736586604544:qk]' field-type='quantitative' max='0.10000000000000001' min='0.0' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1fzeyrp0k680ij1afjdm40i2x3rw].[avg:Calculation_548594736586604544:qk]' palette='red_blue_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.1fzeyrp0k680ij1afjdm40i2x3rw].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1fzeyrp0k680ij1afjdm40i2x3rw].[sum:누적 확진자 수:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.1fzeyrp0k680ij1afjdm40i2x3rw].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#606b76' />
+                <format attr='mark-transparency' value='255' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1fzeyrp0k680ij1afjdm40i2x3rw].[avg:Calculation_548594736586604544:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <text column='[federated.1fzeyrp0k680ij1afjdm40i2x3rw].[avg:Calculation_548594736586604544:qk]' />
+              <color column='[federated.1fzeyrp0k680ij1afjdm40i2x3rw].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-color' value='#ff9d9a' />
+                <format attr='mark-transparency' value='142' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1fzeyrp0k680ij1afjdm40i2x3rw].[avg:Calculation_548594736586604544:qk] + [federated.1fzeyrp0k680ij1afjdm40i2x3rw].[sum:누적 확진자 수:qk])</rows>
+        <cols>[federated.1fzeyrp0k680ij1afjdm40i2x3rw].[mn:날짜:ok]</cols>
+      </table>
+      <simple-id uuid='{485FC042-5D20-4FAD-9785-38C5E14C23AB}' />
+    </worksheet>
+    <worksheet name='맵 '>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='corona19' name='federated.1fzeyrp0k680ij1afjdm40i2x3rw' />
+            <datasource caption='매개 변수' name='Parameters' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='하루 일자' datatype='date' name='[매개 변수 1]' param-domain-type='range' role='measure' type='quantitative' value='#2020-04-14#'>
+              <calculation class='tableau' formula='#2020-04-14#' />
+              <range max='#2021-08-15#' min='#2020-03-02#' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1fzeyrp0k680ij1afjdm40i2x3rw'>
+            <column caption='일자' datatype='boolean' name='[Calculation_548594736600072193]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='DATEDIFF(&quot;month&quot;,[날짜 (District)],[Parameters].[매개 변수 1])=0&#13;&#10;and&#13;&#10;DATEDIFF(&quot;day&quot;,[날짜 (District)],[Parameters].[매개 변수 1])&gt;=0' />
+            </column>
+            <column-instance column='[Calculation_548594736600072193]' derivation='None' name='[none:Calculation_548594736600072193:nk]' pivot='key' type='nominal' />
+            <column-instance column='[지역명]' derivation='None' name='[none:지역명:nk]' pivot='key' type='nominal' />
+            <column-instance column='[전일 대비 증감 수]' derivation='Sum' name='[sum:전일 대비 증감 수:qk]' pivot='key' type='quantitative' />
+            <column datatype='date' datatype-customized='true' name='[날짜 (District)]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[전일 대비 증감 수]' role='measure' type='quantitative' />
+            <column datatype='string' name='[지역명]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1fzeyrp0k680ij1afjdm40i2x3rw].[none:Calculation_548594736600072193:nk]'>
+            <groupfilter function='member' level='[none:Calculation_548594736600072193:nk]' member='true' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1fzeyrp0k680ij1afjdm40i2x3rw].[none:Calculation_548594736600072193:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <color column='[federated.1fzeyrp0k680ij1afjdm40i2x3rw].[sum:전일 대비 증감 수:qk]' />
+              <lod column='[federated.1fzeyrp0k680ij1afjdm40i2x3rw].[none:지역명:nk]' />
+              <geometry column='[federated.1fzeyrp0k680ij1afjdm40i2x3rw].[Geometry (generated)]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1fzeyrp0k680ij1afjdm40i2x3rw].[Latitude (generated)]</rows>
+        <cols>[federated.1fzeyrp0k680ij1afjdm40i2x3rw].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{4F1D826F-642A-4CCA-9E51-428A23566074}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='누적확진자 수 대비 사망자 확률 '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='5' param='[federated.1fzeyrp0k680ij1afjdm40i2x3rw].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{4F77B305-FC4B-4BE6-A436-489172EF239E}' />
+    </window>
+    <window class='worksheet' name='맵 '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1fzeyrp0k680ij1afjdm40i2x3rw].[sum:전일 대비 증감 수:qk]' type='color' />
+            <card mode='slider' param='[Parameters].[매개 변수 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1fzeyrp0k680ij1afjdm40i2x3rw].[none:Calculation_548594736600072193:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{3CCFBDC7-BEBC-4D96-9D77-5D52CAED34D8}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='누적확진자 수 대비 사망자 확률 ' width='192'>
+      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
+      YII=
+    </thumbnail>
+    <thumbnail height='192' name='맵 ' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
